@@ -46,6 +46,8 @@ private:
 	SceneManager* sceneManager;
 	/// Escena inicial. Punto de entrada de la aplicación
 	Scene* initialScene;
+	
+	sf::Clock updateClock;
 
 	App();
 

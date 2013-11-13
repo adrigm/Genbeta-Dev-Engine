@@ -54,12 +54,12 @@ void SceneMain::event(sf::Event theEvent)
 
 void SceneMain::resume()
 {
-	std::cout << "Escena reanudada\n";
+	//std::cout << "Escena reanudada\n";
 }
 
 void SceneMain::pause()
 {
-	std::cout << "Escena pausada\n";
+	//std::cout << "Escena pausada\n";
 }
 
 void SceneMain::draw()

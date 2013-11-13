@@ -4,6 +4,8 @@
 #include <GDE/Core/ConfigReader.hpp>
 #include <GDE/Core/ConfigCreate.hpp>
 
+#include <iostream> // Quitar
+
 namespace GDE
 {
 
@@ -14,6 +16,7 @@ App::App()
 	, exitCode(GDE::StatusNoError)
 	, running(false)
 	, initialScene(NULL)
+	, updateClock()
 {
 	// Se inicializa el sistema de loggin
 	GDE::Log::init("log.txt");
@@ -190,6 +193,8 @@ void App::gameLoop()
 	// Bucle mientras se está ejecutando y la ventana está abierta
 	while (this->isRunning() && this->window.isOpen())
 	{
+		
+		std::cout << this->updateClock.restart().asSeconds() << std::endl;
 		
 		// Gestionamos los eventos de la aplicación
 		sf::Event event;
